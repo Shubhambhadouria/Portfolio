@@ -72,4 +72,39 @@ $(document).ready(function () {
   });
 });
 
+const form = document.getElementById("contact-form");
+const toast = document.getElementById("toast");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault(); // prevent redirect
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      showToast("Message sent successfully ✅");
+      form.reset();
+    } else {
+      showToast("Failed to send message ❌");
+    }
+  } catch (error) {
+    showToast("Something went wrong ❌");
+  }
+});
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
 

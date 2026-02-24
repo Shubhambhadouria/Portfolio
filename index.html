@@ -29,6 +29,7 @@
         <div class="max-width">
             <div class="logo"><a href="#">Port<span>Folio</span></a></div>
             <ul class="menu">
+                <li><a href="https://drive.google.com/file/d/1Zj6KsP_4RZrOBwiXXNk_npuO_1N-YqC7/view" target="_blank" class="menu-btn">Resume</a></li>
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#services" class="menu-btn">Skills</a></li>
@@ -72,6 +73,25 @@
       </div>
     </div>
   </section>
+
+     <!-- about section start -->
+     <section class="about" id="about">
+      <div class="max-width">
+        <h2 class="title">Ebooks</h2>
+        <div class="about-content">
+          <div class="column left">
+            <img src="./images/Profile.jpg" alt="">
+          </div>
+          <div class="column right">
+            <div class="text">I'm Shubham Singh Bhadouria and I'm a <span class="typing-2"></span></div>
+            <p>Results-driven Full-Stack Developer with around 3 years of experience in designing and developing scalable web applications using Java (Spring Boot) and React.js. Proficient in building robust backend systems, interactive user interfaces, and integrating third-party APIs. Skilled in Agile development, API integration, and debugging with a focus on performance and clean architecture. Passionate about delivering reliable solutions that enhance business efficiency.
+              The States that I lived in India are
+              Karnataka, Madhya Pradesh, Rajasthan, West Bengal, Assam and Tripura.</p>
+            <a href="https://drive.google.com/file/d/1Zj6KsP_4RZrOBwiXXNk_npuO_1N-YqC7/view" target="_blank">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>  
 
     <!-- services section start -->
     <section class="services" id="services">
@@ -342,27 +362,34 @@
           </div>
         </div>
         <div class="column right">
-          <div class="text">Message me</div>
-          <form action="#">
-            <div class="fields">
-              <div class="field name">
-                <input type="text" placeholder="Name" required>
-              </div>
-              <div class="field email">
-                <input type="email" placeholder="Email" required>
-              </div>
-            </div>
-            <div class="field">
-              <input type="text" placeholder="Subject" required>
-            </div>
-            <div class="field textarea">
-              <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
-            </div>
-            <div class="button-area">
-              <button type="submit">Send message</button>
-            </div>
-          </form>
-        </div>
+  <div class="text">Message me</div>
+
+  <form id="contact-form" action="https://formspree.io/f/xjgepqan" method="POST">
+    <div class="fields">
+      <div class="field name">
+        <input type="text" name="name" placeholder="Name" required>
+      </div>
+      <div class="field email">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <input type="text" name="subject" placeholder="Subject" required>
+    </div>
+
+    <div class="field textarea">
+      <textarea name="message" cols="30" rows="10" placeholder="Message.." required></textarea>
+    </div>
+
+    <div class="button-area">
+      <button type="submit">Send message</button>
+    </div>
+  </form>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">Message sent successfully ✅</div>
+</div>
       </div>
     </div>
   </section>

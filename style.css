@@ -796,3 +796,25 @@ footer span a:hover {
     margin: auto;
   }
 }
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 12px;
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  right: 30px;
+  font-size: 16px;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
