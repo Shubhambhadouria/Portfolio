@@ -107,4 +107,9 @@ function showToast(message) {
   }, 3000);
 }
 
+function downloadResume() {
+  window.open("https://drive.google.com/file/d/1Zj6KsP_4RZrOBwiXXNk_npuO_1N-YqC7/view", "_blank");
+  window.location.href = "https://drive.google.com/uc?export=download&id=1Zj6KsP_4RZrOBwiXXNk_npuO_1N-YqC7";
+}
+
 
